@@ -78,10 +78,10 @@ export default function Website({ onContactClick }: WebsiteProps = {}) {
         title="Web Development - Fast, Conversion-Focused Websites | Wexel"
         description="High-performance websites built to convert visitors into customers. Sub-2-second load times. SEO-optimized. Responsive across every device. No bloat."
         keywords="web development, website design, high-performance websites, SEO-optimized websites, responsive web design, conversion-focused websites, custom web development"
-        canonical="https://wexel.com/website"
+        canonical="https://wexel.ai/website"
         breadcrumbs={[
-          { name: 'Home', url: 'https://wexel.com/' },
-          { name: 'Web Development', url: 'https://wexel.com/website' }
+          { name: 'Home', url: 'https://wexel.ai/' },
+          { name: 'Web Development', url: 'https://wexel.ai/website' }
         ]}
         schema={{
           "@context": "https://schema.org",
