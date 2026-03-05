@@ -11,7 +11,7 @@ export default function Terms() {
       <SEO
         title="Terms of Service - Wexel"
         description="Read Wexel's terms of service for AI automation services"
-        canonical="https://wexel.com/terms"
+        canonical="https://wexel.ai/terms"
       />
       <div className="text-white pt-20 sm:pt-32 pb-16 sm:pb-20 relative z-10">
         <div className="max-w-3xl mx-auto px-4 md:px-8">
