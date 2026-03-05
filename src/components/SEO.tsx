@@ -21,8 +21,8 @@ export default function SEO({
   title,
   description,
   keywords = "AI automation, voice automation, AI voice agents, digital transformation, business automation",
-  canonical = "https://wexel.com/",
-  ogImage = "https://wexel.com/wexel.jpg",
+  canonical = "https://wexel.ai/",
+  ogImage = "https://wexel.ai/wexel.jpg",
   ogType = "website",
   schema,
   breadcrumbs,
@@ -91,7 +91,7 @@ export default function SEO({
           "name": "Wexel",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://wexel.com/wexel.jpg"
+            "url": "https://wexel.ai/wexel.jpg"
           }
         },
         "mainEntityOfPage": {
