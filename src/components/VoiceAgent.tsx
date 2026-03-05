@@ -70,10 +70,10 @@ export default function VoiceAgent({ onContactClick }: VoiceAgentProps = {}) {
         title="AI Voice Agents - 24/7 Phone Automation for Scheduling, Leads & Support | Wexel"
         description="AI voice agents that handle calls around the clock. Appointment scheduling, lead qualification, and customer support on autopilot. Sounds human. Scales infinitely."
         keywords="AI voice agents, voice automation, AI phone agents, automated phone calls, AI call center, AI receptionist, voice assistant, 24/7 phone automation"
-        canonical="https://wexel.com/voice"
+        canonical="https://wexel.ai/voice"
         breadcrumbs={[
-          { name: 'Home', url: 'https://wexel.com/' },
-          { name: 'AI Voice Agents', url: 'https://wexel.com/voice' }
+          { name: 'Home', url: 'https://wexel.ai/' },
+          { name: 'AI Voice Agents', url: 'https://wexel.ai/voice' }
         ]}
         articleData={{
           headline: "AI Voice Agents - 24/7 Phone Automation That Sounds Human",
