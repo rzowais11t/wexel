@@ -1,0 +1,18 @@
+{
+  "name": "Wexel - AI-First Automation Agency",
+  "short_name": "Wexel",
+  "description": "AI automation systems for businesses. Voice agents, CRM, mass outreach, e-commerce, social media, and web.",
+  "icons": [
+    {
+      "src": "/wexel.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#0a1628",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}
