@@ -99,7 +99,7 @@ export default function Terms() {
               <section>
                 <h2 className="text-2xl font-bold mb-4">9. Contact Information</h2>
                 <p className="text-white/70 leading-relaxed">
-                  If you have any questions about these Terms of Service, please contact us at hello@wexel.com
+                  If you have any questions about these Terms of Service, please contact us at business@wexel.ai
                 </p>
               </section>
             </div>
