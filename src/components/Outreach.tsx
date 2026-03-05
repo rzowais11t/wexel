@@ -79,10 +79,10 @@ export default function Outreach({ onContactClick }: OutreachProps = {}) {
         title="Mass Outreach Automation - AI Personalized Email at Scale | Wexel"
         description="Send thousands of individually personalized emails that land in inboxes, not spam. AI writes the copy, optimizes send times, and tracks every open and reply."
         keywords="mass outreach automation, AI email marketing, cold email automation, personalized email at scale, sales outreach automation, email deliverability"
-        canonical="https://wexel.com/outreach"
+        canonical="https://wexel.ai/outreach"
         breadcrumbs={[
-          { name: 'Home', url: 'https://wexel.com/' },
-          { name: 'Mass Outreach', url: 'https://wexel.com/outreach' }
+          { name: 'Home', url: 'https://wexel.ai/' },
+          { name: 'Mass Outreach', url: 'https://wexel.ai/outreach' }
         ]}
         schema={{
           "@context": "https://schema.org",
