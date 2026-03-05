@@ -1,0 +1,406 @@
+import { motion, useInView } from 'framer-motion';
+import { useRef, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Marquee from 'react-fast-marquee';
+import { Globe, Users, Lightbulb, LucideIcon, Building2, ShoppingCart, Bitcoin, Heart, ArrowRight, BarChart3, PhoneCall, Mail, Share2 } from 'lucide-react';
+import SEO from './SEO';
+import FAQ from './FAQ';
+
+export default function Hero() {
+  const fullText = "Wexel";
+  const [displayedText, setDisplayedText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const heroRef = useRef(null);
+  const heroInView = useInView(heroRef, { once: true, amount: 0.2 });
+
+  useEffect(() => {
+    if (currentIndex < fullText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText(prev => prev + fullText[currentIndex]);
+        setCurrentIndex(prev => prev + 1);
+      }, 150);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, fullText]);
+
+  const objectives = [
+    {
+      icon: Lightbulb,
+      title: 'Innovation-Driven Transformation',
+      description: 'We use AI where it makes a real difference. Not for the sake of it. To replace manual processes that slow your business down.'
+    },
+    {
+      icon: Globe,
+      title: 'End-to-End Solutions',
+      description: 'Strategy through execution. We handle the full build, integration, and deployment. No handoffs. No gaps.'
+    },
+    {
+      icon: Users,
+      title: 'Human-Centered Design',
+      description: 'Automation built around how your team actually works. Not the other way around.'
+    }
+  ];
+
+  return (
+    <>
+      <SEO
+        title="Wexel - AI Automation Agency | Voice Agents, CRM, Outreach & E-Commerce"
+        description="Wexel builds AI automation systems for businesses. Voice agents, CRM, mass outreach, e-commerce, social media, and web. We specialize so you scale."
+        keywords="AI automation agency, AI voice agents, AI CRM, mass outreach automation, e-commerce AI, social media automation, business automation, Wexel"
+        canonical="https://wexel.com/"
+      />
+      <div className="text-white">
+        <section className="flex items-center justify-center px-6 pt-12 relative" style={{ minHeight: '100dvh' }}>
+          <div className="w-full max-w-[1800px] relative z-10 text-center">
+            <h1
+              className="text-white font-bold leading-[0.85] tracking-[0.08em] uppercase"
+              style={{ fontSize: 'clamp(5.5rem, 10vw, 12rem)', fontFamily: 'Blanka, sans-serif', fontWeight: 900, color: '#ffffff' }}
+            >
+              {displayedText}
+            </h1>
+            <div className="mt-6 md:mt-12">
+              <p className="hero-description text-white text-base sm:text-xl md:text-2xl leading-relaxed font-semibold tracking-wide whitespace-nowrap">
+                AI-First Automation Agency.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="pt-32 pb-20">
+          <div className="max-w-7xl mx-auto px-4 md:px-8">
+            <div
+              ref={heroRef}
+              className="mb-32 text-center max-w-5xl mx-auto"
+            >
+              <h2
+                className="text-white leading-[0.9] mb-8"
+                style={{
+                  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                  fontWeight: 700,
+                  letterSpacing: '-0.04em',
+                  fontSize: 'clamp(2.5rem, 10vw, 6rem)',
+                }}
+              >
+                We Build Systems That Run Your Business
+              </h2>
+
+              <p className="text-xl md:text-2xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+               Every system built with security and a backup plan in mind. Autonomous systems that work 24/7.
+              </p>
+            </div>
+
+            <MissionSection />
+
+            <div className="mb-16">
+              <SectionHeader
+                title="How we get results"
+              />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                {objectives.map((objective, index) => (
+                  <ObjectiveCard key={index} {...objective} index={index} />
+                ))}
+              </div>
+            </div>
+
+            <div id="industries">
+              <IndustriesSection />
+            </div>
+
+            <div id="solutions">
+              <SolutionsSection />
+            </div>
+          </div>
+        </div>
+
+        <div id="faq">
+          <FAQ />
+        </div>
+
+        <div className="w-full backdrop-blur-md bg-white/10 py-1 border-t border-white/5 mt-12">
+          <Marquee speed={50} autoFill>
+            <span className="text-xs font-bold uppercase tracking-wider mx-4">
+              <span className="text-white">WHERE AI MEETS </span>
+              <span className="text-white">BUSINESS EXCELLENCE</span>
+              <span className="text-white">.</span>
+            </span>
+          </Marquee>
+        </div>
+      </div>
+    </>
+  );
+}
+
+function SectionHeader({ title, subtitle }: { title: string; subtitle?: string }) {
+  return (
+    <div className="text-center mb-12">
+      <h2
+        className="text-4xl md:text-5xl font-bold mb-4"
+        style={{
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+          letterSpacing: '-0.02em',
+        }}
+      >
+        {title}
+      </h2>
+      {subtitle && <p className="text-lg text-white/60">{subtitle}</p>}
+    </div>
+  );
+}
+
+function MissionSection() {
+  const ref = useRef(null);
+
+  return (
+    <div
+      ref={ref}
+      className="mb-32 max-w-4xl mx-auto"
+    >
+      <div className="relative p-12 md:p-16 rounded-3xl backdrop-blur-md bg-white/5 border border-white/10">
+        <div className="text-sm text-white/40 uppercase tracking-wider mb-4">Achievement</div>
+        <h3
+          className="text-3xl md:text-4xl font-bold mb-6"
+          style={{
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+            letterSpacing: '-0.02em',
+          }}
+        >
+          Automation That Runs Without You
+        </h3>
+        <p className="text-lg md:text-xl text-white/70 leading-relaxed">
+          We build AI Systems that wont go offline when there's a mass outage like the recent one.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+interface ObjectiveCardProps {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  index: number;
+}
+
+function ObjectiveCard({ icon: Icon, title, description, index }: ObjectiveCardProps) {
+  return (
+    <div className="relative p-8 rounded-2xl backdrop-blur-md bg-white/5 border border-white/10 h-full transition-all duration-300 hover:border-blue-500/30 hover:bg-blue-500/10">
+      <div className="mb-6 p-3 bg-blue-500/20 rounded-xl inline-block transition-transform duration-300 hover:scale-110 hover:bg-blue-500/30">
+        <Icon size={28} className="text-blue-400" />
+      </div>
+      <h3 className="text-xl font-bold mb-3">{title}</h3>
+      <p className="text-white/60 leading-relaxed">{description}</p>
+    </div>
+  );
+}
+
+function IndustriesSection() {
+  const industries = [
+    {
+      id: 1,
+      title: 'Real Estate',
+      description: 'Built how people actually buy properties. Leads get routed in seconds, not hours. Lead capture, auto-qualification, and so much more.',
+      icon: Building2,
+    },
+    {
+      id: 2,
+      title: 'E-Commerce',
+      description: 'From support to complete intelligent self automated E-Commerce platforms. systems made to keep up with incomming traffics and operations needs.',
+      icon: ShoppingCart,
+    },
+    {
+      id: 3,
+      title: 'Healthcare',
+      description: 'Automated scheduling, intake, patient follow-ups, and documentation. HIPAA-compliant from day one. Your staff stops doing admin work and starts doing the work they were hired for.',
+      icon: Heart,
+    },
+    {
+      id: 4,
+      title: 'Crypto',
+      description: 'We automated many of the algorithmic and security aspects of the blockchain, facilitating faster development in the meme coin industry—from code to websites—countless times.',
+      icon: Bitcoin,
+    },
+  ];
+
+  return (
+    <div className="mt-32 max-w-7xl mx-auto">
+      <div className="mb-16">
+        <h2
+          className="text-white leading-[0.9] mb-4"
+          style={{
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+            fontWeight: 700,
+            letterSpacing: '-0.04em',
+            fontSize: 'clamp(2.5rem, 10vw, 4rem)',
+          }}
+        >
+          Industries
+        </h2>
+        <div className="max-w-2xl">
+          <p className="text-lg text-white/60 mt-3">
+            Industries that we specialize in...
+          </p>
+          <p className="text-base text-white/60 mt-0.5">
+            We know the exact problems in your industry because we have solved them before. No generic solutions. Systems built for how your business actually works.
+          </p>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+        {industries.map((industry) => {
+          const Icon = industry.icon;
+          return (
+            <article key={industry.id} className="group relative">
+              <div className="relative rounded-2xl p-8 h-full backdrop-blur-md bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500">
+                <div className="relative z-10">
+                  <div className="mb-6">
+                    <div className="inline-flex p-4 rounded-xl backdrop-blur-md bg-white/10 transition-all duration-500">
+                      <Icon size={32} className="text-white" />
+                    </div>
+                  </div>
+
+                  <h3
+                    className="text-2xl font-bold leading-tight mb-4"
+                    style={{
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                      letterSpacing: '-0.02em',
+                    }}
+                  >
+                    {industry.title}
+                  </h3>
+
+                  <p className="text-white/70 leading-relaxed">
+                    {industry.description}
+                  </p>
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function SolutionsSection() {
+  const navigate = useNavigate();
+
+  const solutions = [
+    {
+      id: 1,
+      title: 'Intelligent AI CRM',
+      description: 'Lead scoring, automated follow-ups, and pipeline visibility. Your CRM works while your team sells.',
+      category: 'Customer Experience',
+      icon: BarChart3,
+      route: '/aicrm',
+    },
+    {
+      id: 2,
+      title: 'AI Voice Solutions',
+      description: 'AI picks up the phone, qualifies leads, books appointments, handles support. Sounds human. Works 24/7.',
+      category: 'Conversational AI',
+      icon: PhoneCall,
+      route: '/voice',
+    },
+    {
+      id: 3,
+      title: 'Mass Outreach Automation',
+      description: 'Thousands of personalized emails sent at scale. Each one tailored per prospect. High deliverability. Real replies.',
+      category: 'Digital Marketing',
+      icon: Mail,
+      route: '/outreach',
+    },
+    {
+      id: 4,
+      title: 'E-Commerce Intelligence',
+      description: 'Smart product recs, dynamic pricing, and cart recovery. Built to increase AOV and cut abandoned checkouts.',
+      category: 'Commerce Solutions',
+      icon: ShoppingCart,
+      route: '/ecommerce',
+    },
+    {
+      id: 5,
+      title: 'Autonomous Social Media',
+      description: 'Content scheduling, engagement automation, and analytics across every platform. Your social runs itself.',
+      category: 'Social Intelligence',
+      icon: Share2,
+      route: '/social',
+    },
+    {
+      id: 6,
+      title: 'Next-Gen Web Experiences',
+      description: 'Fast, responsive, conversion-focused websites. SEO-optimized. Built to load in under 2 seconds and turn visitors into customers.',
+      category: 'Digital Presence',
+      icon: Globe,
+      route: '/website',
+    },
+  ];
+
+  return (
+    <div className="mt-32 max-w-7xl mx-auto">
+      <div className="mb-16">
+        <h2
+          className="text-white leading-[0.9] mb-4"
+          style={{
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+            fontWeight: 700,
+            letterSpacing: '-0.04em',
+            fontSize: 'clamp(2.5rem, 10vw, 4rem)',
+          }}
+        >
+          Solutions
+        </h2>
+        <div className="max-w-2xl">
+          <p className="text-lg text-white/70 mt-3">
+            Your Vision, Our Algorithm
+          </p>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+        {solutions.map((solution) => {
+          const Icon = solution.icon;
+          return (
+            <div key={solution.id} className="group">
+              <div
+                onClick={() => navigate(solution.route)}
+                className="h-full rounded-2xl border border-white/20 bg-white/10 backdrop-blur-xl hover:border-white/30 hover:bg-white/15 transition-all duration-300 p-7 lg:p-8 flex flex-col cursor-pointer">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="flex-shrink-0 p-3 rounded-xl bg-blue-500/10 border border-blue-500/20">
+                    <Icon size={24} className="text-blue-400" />
+                  </div>
+                  <p className="text-xs text-white/40 uppercase tracking-wider font-semibold">
+                    {solution.category}
+                  </p>
+                </div>
+
+                <h3
+                  className="text-2xl lg:text-3xl font-bold leading-tight mb-3"
+                  style={{
+                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                    letterSpacing: '-0.02em',
+                  }}
+                >
+                  {solution.title}
+                </h3>
+
+                <p className="text-white/50 text-sm lg:text-base leading-relaxed mb-8 flex-1">
+                  {solution.description}
+                </p>
+
+                <div className="flex items-center justify-between pt-5 border-t border-white/6">
+                  <span className="text-sm font-medium text-blue-400 group-hover:text-blue-300 transition-colors duration-300">
+                    Learn more
+                  </span>
+                  <div className="w-8 h-8 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center group-hover:bg-blue-500/20 group-hover:border-blue-500/40 transition-all duration-300">
+                    <ArrowRight size={16} className="text-blue-400 group-hover:translate-x-0.5 transition-transform duration-300" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
