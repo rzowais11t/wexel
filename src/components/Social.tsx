@@ -97,10 +97,10 @@ export default function Social({ onContactClick }: SocialProps = {}) {
         title="AI Social Media Automation - Scheduling, Engagement & Analytics | Wexel"
         description="AI handles your social media. Multi-platform scheduling, automated engagement, and performance tracking. Consistent posting without the manual grind."
         keywords="social media automation, AI social media, social media scheduling, automated engagement, social media analytics, multi-platform posting"
-        canonical="https://wexel.com/social"
+        canonical="https://wexel.ai/social"
         breadcrumbs={[
-          { name: 'Home', url: 'https://wexel.com/' },
-          { name: 'Social Media AI', url: 'https://wexel.com/social' }
+          { name: 'Home', url: 'https://wexel.ai/' },
+          { name: 'Social Media AI', url: 'https://wexel.ai/social' }
         ]}
         schema={{
           "@context": "https://schema.org",
