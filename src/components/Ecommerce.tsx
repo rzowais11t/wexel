@@ -78,10 +78,10 @@ export default function Ecommerce({ onContactClick }: EcommerceProps = {}) {
         title="E-Commerce AI - Dynamic Pricing, Product Recs & Cart Recovery | Wexel"
         description="AI for online stores. Dynamic pricing, smart product recommendations, cart abandonment recovery, and inventory intelligence. Higher AOV. More conversions. Less guesswork."
         keywords="e-commerce AI, dynamic pricing, product recommendations, cart recovery, e-commerce automation, AI retail, inventory intelligence"
-        canonical="https://wexel.com/ecommerce"
+        canonical="https://wexel.ai/ecommerce"
         breadcrumbs={[
-          { name: 'Home', url: 'https://wexel.com/' },
-          { name: 'E-Commerce AI', url: 'https://wexel.com/ecommerce' }
+          { name: 'Home', url: 'https://wexel.ai/' },
+          { name: 'E-Commerce AI', url: 'https://wexel.ai/ecommerce' }
         ]}
         schema={{
           "@context": "https://schema.org",
