@@ -86,10 +86,10 @@ export default function Privacy() {
         title="Privacy Policy - How Wexel Protects Your Data | Wexel"
         description="Read Wexel's privacy policy to understand how we collect, use, and protect your personal information. We implement enterprise-grade security measures including SSL/TLS encryption and comply with GDPR regulations."
         keywords="Wexel privacy policy, data protection, GDPR compliance, data security, personal information protection, cookie policy, data privacy rights"
-        canonical="https://wexel.com/privacy"
+        canonical="https://wexel.ai/privacy"
         breadcrumbs={[
-          { name: 'Home', url: 'https://wexel.com/' },
-          { name: 'Privacy Policy', url: 'https://wexel.com/privacy' }
+          { name: 'Home', url: 'https://wexel.ai/' },
+          { name: 'Privacy Policy', url: 'https://wexel.ai/privacy' }
         ]}
       />
       <div className="text-white" style={{ minHeight: '100dvh' }}>
