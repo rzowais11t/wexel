@@ -70,10 +70,10 @@ export default function AICRM({ onContactClick }: AIcrmProps = {}) {
         title="AI CRM - Predictive Analytics, Auto Workflows & Lead Scoring | Wexel"
         description="AI-powered CRM that scores leads, automates follow-ups, and segments customers without manual work. Built for teams that want pipeline visibility and faster closes."
         keywords="AI CRM, CRM automation, predictive CRM, AI lead scoring, automated follow-ups, customer segmentation, sales pipeline AI"
-        canonical="https://wexel.com/aicrm"
+        canonical="https://wexel.ai/aicrm"
         breadcrumbs={[
-          { name: 'Home', url: 'https://wexel.com/' },
-          { name: 'AI CRM', url: 'https://wexel.com/aicrm' }
+          { name: 'Home', url: 'https://wexel.ai/' },
+          { name: 'AI CRM', url: 'https://wexel.ai/aicrm' }
         ]}
         schema={{
           "@context": "https://schema.org",
