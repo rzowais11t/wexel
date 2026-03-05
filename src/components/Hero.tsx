@@ -238,7 +238,7 @@ function IndustriesSection() {
         </h2>
         <div className="max-w-2xl">
           <p className="text-lg text-white/60 mt-3">
-            Industries that we specialize in...
+            Industries that we specialize in.
           </p>
           <p className="text-base text-white/60 mt-0.5">
             We know the exact problems in your industry because we have solved them before. No generic solutions. Systems built for how your business actually works.
