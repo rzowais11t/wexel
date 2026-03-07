@@ -4,7 +4,7 @@ import { ChevronDown } from 'lucide-react';
 export default function ScrollIndicator() {
   return (
     <motion.div
-      className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2"
+      className="absolute bottom-8 inset-x-0 flex flex-col items-center justify-center gap-2"
       animate={{ y: [0, 12, 0] }}
       transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
     >
