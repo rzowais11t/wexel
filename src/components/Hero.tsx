@@ -6,6 +6,7 @@ import { Globe, Users, Lightbulb, LucideIcon, Building2, ShoppingCart, Bitcoin, 
 import SEO from './SEO';
 import FAQ from './FAQ';
 import NotificationCardsSection from './NotificationCards';
+import ScrollIndicator from './ScrollIndicator';
 
 export default function Hero() {
   const fullText = "Wexel";
@@ -66,6 +67,7 @@ export default function Hero() {
               </p>
             </div>
           </div>
+          <ScrollIndicator />
         </section>
 
         <div className="pt-32 pb-20">
