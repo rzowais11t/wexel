@@ -101,6 +101,11 @@ function NotificationCard({ card }: { card: NotificationCard }) {
     navigate(card.route);
   };
 
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    e.preventDefault();
+    navigate(card.route);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -111,7 +116,15 @@ function NotificationCard({ card }: { card: NotificationCard }) {
     >
       <div
         onClick={handleClick}
-        className="relative p-6 md:p-8 rounded-2xl backdrop-blur-md border transition-all duration-300 hover:scale-105 cursor-pointer overflow-hidden"
+        onTouchEnd={handleTouchEnd}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            handleClick();
+          }
+        }}
+        className="relative p-6 md:p-8 rounded-2xl backdrop-blur-md border transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer overflow-hidden"
         style={{
           backgroundColor: styles.backgroundColor,
           borderColor: styles.borderColor,
