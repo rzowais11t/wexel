@@ -97,12 +97,8 @@ function NotificationCard({ card }: { card: NotificationCard }) {
   const styles = getNotificationStyles(card.type);
   const IconComponent = styles.icon;
 
-  const handleClick = () => {
-    navigate(card.route);
-  };
-
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    e.preventDefault();
+  const handleNavigate = () => {
+    console.log("[v0] Navigating to:", card.route);
     navigate(card.route);
   };
 
@@ -112,22 +108,16 @@ function NotificationCard({ card }: { card: NotificationCard }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
       viewport={{ once: true, margin: '-100px' }}
-      className="group"
+      className="group w-full"
     >
-      <div
-        onClick={handleClick}
-        onTouchEnd={handleTouchEnd}
+      <button
+        onClick={handleNavigate}
         role="button"
-        tabIndex={0}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            handleClick();
-          }
-        }}
-        className="relative p-6 md:p-8 rounded-2xl backdrop-blur-md border transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer overflow-hidden"
+        className="w-full relative p-6 md:p-8 rounded-2xl backdrop-blur-md border transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer overflow-hidden bg-transparent"
         style={{
           backgroundColor: styles.backgroundColor,
           borderColor: styles.borderColor,
+          border: `1px solid ${styles.borderColor}`,
         }}
       >
         {/* Background accent */}
@@ -170,7 +160,7 @@ function NotificationCard({ card }: { card: NotificationCard }) {
             <ArrowRight size={16} style={{ color: styles.iconColor }} />
           </div>
         </div>
-      </div>
+      </button>
     </motion.div>
   );
 }
