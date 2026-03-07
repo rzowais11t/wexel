@@ -139,6 +139,7 @@ function SectionHeader({ title, subtitle }: { title: string; subtitle?: string }
         style={{
           fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
           letterSpacing: '-0.02em',
+          textShadow: '0 10px 30px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.3)',
         }}
       >
         {title}
