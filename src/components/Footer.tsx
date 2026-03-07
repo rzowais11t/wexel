@@ -9,7 +9,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         {/* Brand section - full width */}
         <div className="mb-8 sm:mb-12 max-w-xs">
-          <h3 className="text-xl font-bold mb-2">Wexel</h3>
+          <h3 
+            className="text-xl mb-2 uppercase leading-[0.85]"
+            style={{ fontFamily: 'Blanka, sans-serif', fontWeight: 900, letterSpacing: '0.08em', color: '#ffffff' }}
+          >
+            Wexel
+          </h3>
           <p className="text-white/60 text-sm leading-relaxed">
             AI automation systems built for businesses that want to scale without hiring.
           </p>

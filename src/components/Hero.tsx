@@ -5,6 +5,7 @@ import Marquee from 'react-fast-marquee';
 import { Globe, Users, Lightbulb, LucideIcon, Building2, ShoppingCart, Bitcoin, Heart, ArrowRight, BarChart3, PhoneCall, Mail, Share2 } from 'lucide-react';
 import SEO from './SEO';
 import FAQ from './FAQ';
+import NotificationCardsSection from './NotificationCards';
 
 export default function Hero() {
   const fullText = "Wexel";
@@ -108,7 +109,7 @@ export default function Hero() {
             </div>
 
             <div id="solutions">
-              <SolutionsSection />
+              <NotificationCardsSection />
             </div>
           </div>
         </div>
