@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { CheckCircle2, AlertCircle, Info, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface NotificationCard {
   id: number;
@@ -7,6 +8,7 @@ interface NotificationCard {
   description: string;
   category: string;
   type: 'success' | 'warning' | 'info';
+  route: string;
 }
 
 const notificationCards: NotificationCard[] = [
@@ -16,6 +18,7 @@ const notificationCards: NotificationCard[] = [
     description: 'Lead scoring, automated follow-ups, and pipeline visibility. Your CRM works while your team sells.',
     category: 'Customer Experience',
     type: 'success',
+    route: '/aicrm',
   },
   {
     id: 2,
@@ -23,6 +26,7 @@ const notificationCards: NotificationCard[] = [
     description: 'AI picks up the phone, qualifies leads, books appointments, handles support. Sounds human. Works 24/7.',
     category: 'Conversational AI',
     type: 'info',
+    route: '/voice',
   },
   {
     id: 3,
@@ -30,6 +34,7 @@ const notificationCards: NotificationCard[] = [
     description: 'Thousands of personalized emails sent at scale. Each one tailored per prospect. High deliverability. Real replies.',
     category: 'Digital Marketing',
     type: 'success',
+    route: '/outreach',
   },
   {
     id: 4,
@@ -37,6 +42,7 @@ const notificationCards: NotificationCard[] = [
     description: 'Smart product recs, dynamic pricing, and cart recovery. Built to increase AOV and cut abandoned checkouts.',
     category: 'Commerce Solutions',
     type: 'warning',
+    route: '/ecommerce',
   },
   {
     id: 5,
@@ -44,6 +50,7 @@ const notificationCards: NotificationCard[] = [
     description: 'Content scheduling, engagement automation, and analytics across every platform. Your social runs itself.',
     category: 'Social Intelligence',
     type: 'info',
+    route: '/social',
   },
   {
     id: 6,
@@ -51,6 +58,7 @@ const notificationCards: NotificationCard[] = [
     description: 'Fast, responsive, conversion-focused websites. SEO-optimized. Built to load in under 2 seconds and turn visitors into customers.',
     category: 'Digital Presence',
     type: 'success',
+    route: '/website',
   },
 ];
 
@@ -85,8 +93,13 @@ function getNotificationStyles(type: 'success' | 'warning' | 'info') {
 }
 
 function NotificationCard({ card }: { card: NotificationCard }) {
+  const navigate = useNavigate();
   const styles = getNotificationStyles(card.type);
   const IconComponent = styles.icon;
+
+  const handleClick = () => {
+    navigate(card.route);
+  };
 
   return (
     <motion.div
@@ -97,6 +110,7 @@ function NotificationCard({ card }: { card: NotificationCard }) {
       className="group"
     >
       <div
+        onClick={handleClick}
         className="relative p-6 md:p-8 rounded-2xl backdrop-blur-md border transition-all duration-300 hover:scale-105 cursor-pointer overflow-hidden"
         style={{
           backgroundColor: styles.backgroundColor,
