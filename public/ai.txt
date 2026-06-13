@@ -1,0 +1,30 @@
+# wexel AI Configuration
+# Company: wexel.ai
+# Purpose: AI Automation & Infrastructure Agency
+
+# Summary
+wexel deploys bespoke AI infrastructure to automate mission-critical workflows 24/7. We build autonomous systems for infinite scale and operational efficiency.
+
+# Capabilities
+- AI Voice Solutions (Qualify, Book, Support)
+- Mass Outreach Automation (Personalized Email Scale)
+- E-Commerce Intelligence (Dynamic Pricing, Cart Recovery)
+- Autonomous Social Media (Scheduling, Engagement)
+- Next-Gen Web Experiences (Clean Code, Strategic SEO)
+- Intelligent AI CRM (Lead Scoring, Pipeline Intelligence)
+
+# Tech Stack
+OpenAI, Vercel, Pinecone, Anthropic, Databricks, Vanta
+
+# Public URL Reference
+Home: https://wexel.ai/
+Vision: https://wexel.ai/vision
+Partners: https://wexel.ai/partners
+Case Studies: https://wexel.ai/case-studies
+Contact: https://wexel.ai/contact
+
+# Crawler Instructions
+AI-Crawl: Allowed
+Data-Training: Allowed
+Contact-Email: owais@wexel.ai
+Last-Updated: 2026-04-26

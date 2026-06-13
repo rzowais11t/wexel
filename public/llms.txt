@@ -1,0 +1,43 @@
+# wexel — AI Automation & Infrastructure Agency
+
+> wexel deploys bespoke AI infrastructure to automate mission-critical workflows 24/7. We build autonomous systems for infinite scale.
+
+## About
+
+wexel is an AI automation and infrastructure agency eliminating operational friction through custom-built systems for real estate, e-commerce, fintech, and legal enterprises.
+
+## Services
+
+- **AI Voice Solutions**: AI voice agents that pick up the phone, qualify leads, book appointments, and handle support 24/7.
+- **Mass Outreach Automation**: AI writes unique, personalized emails for every prospect at scale with real-time tracking.
+- **E-Commerce Intelligence**: Dynamic pricing, product recommendations, and automated cart recovery powered by AI.
+- **Autonomous Social Media**: AI-driven scheduling, engagement, and analytics across all platforms.
+- **Next-Gen Web Experiences**: High-performance websites with clean code, strategic design, and built-in SEO.
+- **Intelligent AI CRM**: AI-powered CRM with lead scoring, automated follow-ups, and pipeline intelligence.
+
+## Process
+
+1. **Discover**: We analyze your data ecosystem to find where AI can drive value.
+2. **Build**: We engineer custom AI solutions tailored to your workflows.
+3. **Launch**: We deploy with continuous learning loops for ongoing improvement.
+
+## Technology Partners
+
+OpenAI, Vercel, Pinecone, Anthropic, Databricks, Vanta
+
+## Contact
+
+- Email: owais@wexel.ai
+- Website: https://wexel.ai
+- Contact Page: https://wexel.ai/contact
+
+## Pages
+
+- [Home](https://wexel.ai/)
+- [Contact](https://wexel.ai/contact)
+- [Case Studies](https://wexel.ai/case-studies)
+- [Our Vision](https://wexel.ai/vision)
+- [Partners](https://wexel.ai/partners)
+- [System Status](https://wexel.ai/status)
+- [Privacy Policy](https://wexel.ai/privacy)
+- [Terms of Service](https://wexel.ai/terms)

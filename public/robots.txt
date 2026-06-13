@@ -1,0 +1,32 @@
+# robots.txt for wexel.ai
+# Allow all crawlers (search engines & AI) to index the site
+
+User-agent: *
+Allow: /
+Disallow: /_next/
+Disallow: /api/
+
+# AI crawlers - explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://wexel.ai/sitemap.xml
